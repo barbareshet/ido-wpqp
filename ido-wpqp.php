@@ -18,6 +18,7 @@ if ( !function_exists( 'add_action' ) ) {
 class WPQP {
 	// ...
 	public function __construct() {
+
 		$this->ido_quiz_init();
 	}
 
@@ -36,8 +37,8 @@ class WPQP {
 		add_action( 'wp_enqueue_scripts', array( $this, 'ido_quiz_scripts' ) );
 
 		if ( is_admin() ) {
-			add_action( 'add_meta_boxes', array( $this, 'register_metaboxes' ) );
-			add_action( 'save_post', array( $this, 'save_metaboxes' ), 20, 2 );
+			add_action( 'add_meta_boxes', array( $this, 'ido_register_metaboxes' ) );
+			add_action( 'save_post', array( $this, 'ido_save_metaboxes' ), 20, 2 );
 		}
 	}
 
@@ -75,5 +76,12 @@ class WPQP {
 	public function load_cpts(){
 
 	}
+
+	public function ido_register_metaboxes(){
+
+    }
+    public function ido_save_metaboxes(){
+
+    }
 }
 new WPQP();
