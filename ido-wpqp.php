@@ -74,14 +74,14 @@ class WPQP {
 		}
 	}
 	public function load_cpts(){
-
+		//todo..
 	}
 
 	public function ido_register_metaboxes(){
-
+		//todo..
     }
     public function ido_save_metaboxes(){
-
+	    //todo..
     }
 }
 new WPQP();
